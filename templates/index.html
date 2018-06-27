@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content_class %}post{% endblock %}
+
+{% block content %}
+    <div class="row">
+        {% for page in pages %}
+            <div class="col-md-6 list">
+                <h5>
+                    <a href="{{ url_for('page', path=page.path) }}">
+                        {{ page.meta.title }}
+                    </a>
+                </h5>
+                <small class="date">{{ page.meta.date }}</small>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
