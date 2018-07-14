@@ -6,7 +6,7 @@ tags: ['aws', 'powershell', 'vscode', 'ssh', 'putty']
 Windows 사용자라면 Visual Studio Code 내부에서 PowerShell 터미널을 이용할 수 있습니다.
 그간 편집기와 putty 창을 따로 켜셨던 분들이 생각보다 많을 겁니다.
 
-![putty창](/image/aws/frompowershell.png)
+![putty창](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/aws/frompowershell.png)
 
 이런 화면 없이 터미널에서 바로 접속하는 방법입니다.
 
@@ -47,7 +47,7 @@ plink -ssh -i [puttygen으로 keypair pem -> ppk 변환] ubuntu@[AWS Instance Pu
 
 이 경우에는 기존의 레거시 콘솔 설정을 사용하고 있기 떄문입니다. 아래와 같이 체크 해제를 해 주시면 정상적으로 동작합니다.
 
-![legacy check 해제](/image/aws/legacy.png)
+![legacy check 해제](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/aws/legacy.png)
 
 <div class='warn'>
 <code>SIGINT</code> 인터럽트를 전달했지만 AWS 접속을 끊습니다.

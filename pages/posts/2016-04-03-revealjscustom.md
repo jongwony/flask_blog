@@ -86,7 +86,7 @@ Ctrl + P (Windows) 또는 CMD + P(MAC)를 눌러 인쇄 화면으로 들어갑�
 
 배경 그래픽 옵션에 체크하고 저장을 누르면 만든 프레젠테이션 그대로 PDF로 내보낼 수 있습니다.
 
-![pdfexport](/image/pdfexport.png)
+![pdfexport](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/pdfexport.png)
 
 <div class="warn">
   파일이 index.html이 아닌 이름으로 저장했을 경우는 동작하지 않습니다. <br>
@@ -101,7 +101,7 @@ Ctrl + P (Windows) 또는 CMD + P(MAC)를 눌러 인쇄 화면으로 들어갑�
 
 발표 시간 경과도 보여주며 슬라이드 노트를 사용할 수 있습니다.
 
-![notes.js](/image/notesjs.png)
+![notes.js](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/notesjs.png)
 
 슬라이드 노트 사용법
 
@@ -289,6 +289,6 @@ $(document).keypress(function(event)
 
 이 작업까지 끝나면 숫자를 눌렀을 때 아래와 같이 Drawing이 가능합니다!
 
-![Sketch.js](/image/sketchjs.png)
+![Sketch.js](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/sketchjs.png)
 
 모두 멋진 프레젠테이션을 해보시길 바랍니다.

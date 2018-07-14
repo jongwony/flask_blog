@@ -11,7 +11,7 @@ Windows 10에서 현재 활성화 되지 않은 윈도우를 투명하게 하는
 
 활성화 창 투명도: 90%, 비활성화 창 투명도: 50%
 
-![layerwindow](/image/layerwindow/layerwindow_v1.png)
+![layerwindow](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/layerwindow/layerwindow_v1.png)
 
 ~~아직은 핵심 기능만 구현한 것이며 추후 트레이 아이콘으로 백그라운드 프로세스로 만들 계획입니다.~~
 
@@ -19,7 +19,7 @@ Windows 10에서 현재 활성화 되지 않은 윈도우를 투명하게 하는
 
 - - -
 
-터미널을 투명하게 할 수 있다면 다른 창도 투명하게 할 수 있겠지?  
+터미널을 투명하게 할 수 있다면 다른 창도 투명하게 할 수 있겠지?
 이런 궁금증으로 만들어 본 프로그램입니다.
 
 간단하게 다른 프로그램의 창의 정보를 얻어서 바꾸면 됩니다.
@@ -30,7 +30,7 @@ Windows 10에서 현재 활성화 되지 않은 윈도우를 투명하게 하는
 
 실행을 해보면 창 캡션(제목), 핸들, 영역 및 세부 정보를 얻을 수 있게 됩니다.
 
-![spy++](/image/layerwindow/spypp.png)
+![spy++](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/layerwindow/spypp.png)
 
 이들을 제어하기 위해서는 Windows API를 사용해야 합니다.
 

@@ -34,11 +34,11 @@ GitHub 계정이 있다면 Git Repository와 로컬 디렉터리를 동기화하
 
 먼저 [GitHub에 접속](//github.com)하여 Repository를 생성합니다.
 
-![](/image/aws/gitrepo.png)
+![](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/aws/gitrepo.png)
 
 그러면 본인의 Git Repository를 clone 하기 위한 url이 제공됩니다.
 
-![](/image/aws/giturl.png)
+![](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/aws/giturl.png)
 
 Pycharm 에서 Create New Project > VCS에서 위 과정으로 복사한 url을 붙여넣습니다.
 
@@ -61,7 +61,7 @@ Python Interpreter > Add Remote를 선택합니다.
 
 Host에 EC2 Public DNS 주소와 접속할 포트를 지정하고 사용자를 Ubuntu로 한 다음 Keypair 인증 방식으로 pem 파일을 가져옵니다.
 
-![](/image/aws/interpreter.png)
+![](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/aws/interpreter.png)
 
 이전 포스팅에서 EC2에 OpenCV와 Tensorflow를 설치한 환경이 Python 2.7.6 버전이었기 때문에
 
@@ -76,19 +76,19 @@ Ctrl + Alt + S를 누르거나 File > Settings로 이동합니다.
 
 Configure > Setting > Deployment의 Connection 탭으로 이동합니다.
 
-![](/image/aws/deploy.png)
+![](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/aws/deploy.png)
 
 SFTP 연결을 새로 만듭니다.
 
 호스트란에 EC2로 접속하는 Public DNS 주소를 입력합니다.
 
-![](/image/aws/connection.png)
+![](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/aws/connection.png)
 
 Mapping 탭으로 이동하여 동기화할 프로젝트 경로를 지정합니다.
 
 이때 루트경로(/)는 Connection 탭에서 자동으로 검색된 경로(/home/ubuntu/) 입니다.
 
-![](/image/aws/mapping.png)
+![](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/aws/mapping.png)
 
 <div class='def'>
 Tools > Deployment > Sync with Deployed to 항목에서 <br>

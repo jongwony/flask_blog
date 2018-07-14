@@ -15,7 +15,7 @@ tags: ['hadoop','install']
 
 하둡의 파일 시스템인 HDFS는 일반적으로 하나의 NameNode와 다수의 DataNode가 master/slave 구조로 이루어진 구조입니다.
 
-![hdfs_arch](/image/hadoop/hdfsarchitecture.gif)
+![hdfs_arch](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/hadoop/hdfsarchitecture.gif)
 
 내부적으로 DataNode는 큰 파일을 안정적으로 저장하기 위해 블록 구조로 이루어져 있습니다. 이 블록은 복제되며 기본적으로 64MB로 설정됩니다.
 
@@ -28,7 +28,7 @@ tags: ['hadoop','install']
 
 아키텍처에 따라 간단하게 노트북에서 가상화로 가능한 네트워크 토폴로지를 구성해 보도록 하겠습니다.
 
-![test](/image/hadoop/testtopology.png)
+![test](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/hadoop/testtopology.png)
 
 저는 가상화 도구로 *Hyper-V*를 사용했으며 다른 가상화 도구를 사용하더라도 차이는 없습니다.
 
@@ -37,13 +37,13 @@ tags: ['hadoop','install']
 Windows의 경우 기본적으로 네트워크 공유가 비활성화 되어 있습니다.
 다음 설정이 되어 있어야 합니다.
 
-![share](/image/hadoop/sharenetwork.png)
+![share](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/hadoop/sharenetwork.png)
 
 이 작업을 통해 내부 스위치를 통해 외부로 인터넷 접속이 가능합니다.
 
 Hyper-V에서 내부 스위치를 생성한 다음 서브넷 마스크를 고려하여 다음과 같이 설정합니다.
 
-![internal_switch](/image/hadoop/internalswitch.png)
+![internal_switch](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/hadoop/internalswitch.png)
 
 이제 OS를 설치합니다. [우분투 16.04](//releases.ubuntu.com/16.04/) 이미지를 사용하였습니다. 저의 경우 파티션은 자동으로 나누었으며 `hadoop` 유저 생성과 ssh 및 기본 패키지 매니저만 같이 설치하였습니다.
 
@@ -258,7 +258,7 @@ $HADOOP_PREFIX/sbin/hadoop-daemons.sh --config $HADOOP_CONF_DIR --script hdfs st
 
 여기서 뜨는 로그를 확인하셔서 오류메시지 없이 다음과 같은 로그가 나오면 제대로 구동이 된 것입니다.
 
-![log](/image/hadoop/namenodelog.png)
+![log](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/hadoop/namenodelog.png)
 
 앞의 데몬 구동 명령과 중복되는 부분이 있지만 secondary namenode까지 완전히 구동하는 스크립트는 `start-dfs.sh` 파일입니다.
 
@@ -277,7 +277,7 @@ bin/hdfs dfs -ls /user/hadoop/output
 bin/hdfs dfs -cat /user/hadoop/output/part-r-00000
 ```
 
-![result](/image/hadoop/result.png)
+![result](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/hadoop/result.png)
 
 보시다시피 `dfs[a-z.]+` 정규표현식을 `grep`하는 테스트도 정상적으로 동작함을 알 수 있습니다.
 

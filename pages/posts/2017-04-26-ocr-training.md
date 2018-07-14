@@ -63,11 +63,11 @@ OpenCV의 윤곽(contour) 인식은 기본적으로 검은 바탕에서의 흰�
 
 아래 이미지로 테스트를 해보겠습니다.
 
-![rawimage](/image/ocr/rawimage.png)
+![rawimage](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/ocr/rawimage.png)
 
 이미지를 자세히 확대해 보시면 다음과 같이 글씨 주위의 노이즈를 발견할 수 있습니다.
 
-![noise](/image/ocr/noise.png)
+![noise](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/ocr/noise.png)
 
 
 다음은 예제 코드입니다.
@@ -111,7 +111,7 @@ cv2.imwrite(dst, result)
 
 아래는 결과 사진입니다.
 
-![result](/image/ocr/result.png)
+![result](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/ocr/result.png)
 
 이로써 글자 인식만을 위한 깔끔한 이미지를 추출할 수 있습니다.
 
@@ -127,7 +127,7 @@ os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr'
 print(pytesseract.image_to_string(Image.open('result.png')))
 ```
 
-![pytesseract_basic](/image/ocr/pytesseract_basic.png)
+![pytesseract_basic](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/ocr/pytesseract_basic.png)
 
 사실 이런 기본적인 이미지 프로세싱 과정만 거쳐도 위와 같이 벌써부터 차이가 나기 시작함을 알 수 있습니다(출력을 위해 `np.vstack`으로 바꾸어 출력했습니다).
 
@@ -182,7 +182,7 @@ text2image --text=example.txt --outputbase=mylang.NanumGothic.exp0 --font='Nanum
 
 *jTessBoxEditor.jar* 또는 *ScrollView.jar*를 사용하시는 것을 권장합니다.
 
-![jTessBoxEditor](/image/ocr/jtessboxeditor.png)
+![jTessBoxEditor](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/ocr/jtessboxeditor.png)
 ###### jTessBoxEditor.jar
 
 사진과 같이 해당 좌표를 수정하거나 새로 추가할 수 있으며 그래픽 도구 없이 그냥 box파일을 편집해도 됩니다...

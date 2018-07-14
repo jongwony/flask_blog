@@ -46,7 +46,7 @@ SQL*Plus 스키마에 접속할 때 한번만 실행됩니다.
 
 다음과 같은 현상으로 나타날 수 있습니다.
 
-![before_script](/image/database/before_script.png)
+![before_script](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/database/before_script.png)
 
 이런 경우를 해결하기 위해 간단히 [스크립트](/file/col_resize.sql)를 만들어 보았습니다.
 

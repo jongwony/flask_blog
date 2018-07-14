@@ -82,6 +82,6 @@ choco install visualstudiocode
 
 터미널에서 실행하는 명령어는 `code`입니다.
 
-![vscode](/image/vscode.png)
+![vscode](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/vscode.png)
 
 기타 다양한 패키지 및 확장 프로그램 역시 설치할 수 있습니다. 자세한 내용은 [GitHub](//github.com/chocolatey/choco)를 참조하시기 바랍니다.

@@ -7,12 +7,12 @@ tags: ['python', 'pandas', 'flask', 'd3.js']
 
 데이터가 끊임없이 변화하고 방대해지면서 데이터를 잘 분석하고, 표현하는 것이 중요해지고 있습니다.
 
-데이터를 분석하는 이유는 가치를 창출하는 등 여러가지 이유가 있지만 특히 **의사소통을 위해서**라고 생각합니다.  
+데이터를 분석하는 이유는 가치를 창출하는 등 여러가지 이유가 있지만 특히 **의사소통을 위해서**라고 생각합니다.
 어떠한 데이터를 분석할 것인지 기획이 필요하며 데이터를 담고, 추출하고, 원하는 데이터를 쿼리를 통해 다듬는 분석 과정으로 다른 사람에게 직관적으로 빠른 이해를 돕기 위해 시각화를 합니다.
 
 그림으로 나타내면 다음과 같습니다.
 
-![workflow](/image/visualization/dataworkflow.gif)
+![workflow](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/visualization/dataworkflow.gif)
 ###### Image: [https://www.promptcloud.com/next-generation-of-data-mining/](//www.promptcloud.com/next-generation-of-data-mining/)
 
 우선 데이터를 추출하여 데이터베이스에 저장합니다.
@@ -23,7 +23,7 @@ tags: ['python', 'pandas', 'flask', 'd3.js']
 
 [laptop_rhythm](//github.com/lastone9182/laptop_rhythm) 프로젝트는 로그온, 로그오프, 절전 시간 등을 분석하여 하루 동안 컴퓨터가 켜져 있는 시간을 웹페이지를 통해 시각화하는 간단한 프로젝트입니다.
 
-![laptop_rhythm](/image/visualization/laptop_rhythm.png)
+![laptop_rhythm](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/visualization/laptop_rhythm.png)
 
 분석보다는 시각화에 중점을 두었기 때문에 데이터 탐색(Exploratory)에 가까울 수 있습니다.
 
@@ -42,7 +42,7 @@ Javascript에서 chart.js, highcharts 등 데이터 시각화를 위한 여러 �
 
 여기까지 과정을 그림으로 표현하면 아래와 같습니다.
 
-![Process](/image/visualization/laptop_rhythm_process.png)
+![Process](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/visualization/laptop_rhythm_process.png)
 
 그러면 필요한 구성요소를 먼저 설치하는 것 부터 시작해보겠습니다.
 
@@ -153,7 +153,7 @@ Windows의 로그온오프, 절전 등의 시간의 데이터를 분석하려고
 Windows의 로그온오프, 절전은 Windows 시스템으로 발생한 이벤트입니다.
 이는 로컬 컴퓨터의 이벤트 뷰어로 확인하실 수 있습니다.
 
-![Windows Event](/image/visualization/windows_event.png)
+![Windows Event](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/visualization/windows_event.png)
 
 `Windows 로그 - 시스템`에서 로그온, 로그오프, 절전, 절전 해제에 해당되는 이벤트 ID는 각각 7001, 7002, 506, 507이었습니다.
 이제 이 4가지 이벤트만 추출하면 됩니다.
