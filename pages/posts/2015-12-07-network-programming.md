@@ -3,7 +3,7 @@ layout: post
 title: 네트워크 프로그래밍 발표자료
 tags: ['project','report','ppt']
 
-<a class="gitribbon" href="//github.com/lastone9182/NetworkProgramming/tree/master/Hedgewars_Network_ver"></a>
+<a class="gitribbon" href="//github.com/jongwony/NetworkProgramming/tree/master/Hedgewars_Network_ver"></a>
 
 <!--
 <iframe src="http://www.slideshare.net/Jongwon_/slideshelf" width="490px" height="470px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>

@@ -3,7 +3,7 @@ layout: post
 title: Data Visualization with Flask
 tags: ['python', 'pandas', 'flask', 'd3.js']
 
-<a class="gitribbon" href="//github.com/lastone9182/laptop_rhythm"></a>
+<a class="gitribbon" href="//github.com/jongwony/laptop_rhythm"></a>
 
 데이터가 끊임없이 변화하고 방대해지면서 데이터를 잘 분석하고, 표현하는 것이 중요해지고 있습니다.
 
@@ -21,7 +21,7 @@ tags: ['python', 'pandas', 'flask', 'd3.js']
 
 위의 프로세스를 통해 간단한 프로젝트를 만들어 보았습니다.
 
-[laptop_rhythm](//github.com/lastone9182/laptop_rhythm) 프로젝트는 로그온, 로그오프, 절전 시간 등을 분석하여 하루 동안 컴퓨터가 켜져 있는 시간을 웹페이지를 통해 시각화하는 간단한 프로젝트입니다.
+[laptop_rhythm](//github.com/jongwony/laptop_rhythm) 프로젝트는 로그온, 로그오프, 절전 시간 등을 분석하여 하루 동안 컴퓨터가 켜져 있는 시간을 웹페이지를 통해 시각화하는 간단한 프로젝트입니다.
 
 ![laptop_rhythm](//s3.ap-northeast-2.amazonaws.com/jongwony/blog/visualization/laptop_rhythm.png)
 

@@ -3,7 +3,7 @@ layout: post
 title: Windows 창 투명화 프로그램
 tags: ['windows', 'transparent', 'winapi', 'layerwindow']
 
-<a class="gitribbon" href="//github.com/lastone9182/layerwindowtray"></a>
+<a class="gitribbon" href="//github.com/jongwony/layerwindowtray"></a>
 
 [Download](/file/layerwindowv1_2.zip)
 
@@ -15,7 +15,7 @@ Windows 10에서 현재 활성화 되지 않은 윈도우를 투명하게 하는
 
 ~~아직은 핵심 기능만 구현한 것이며 추후 트레이 아이콘으로 백그라운드 프로세스로 만들 계획입니다.~~
 
-[현재 패치](//github.com/lastone9182/layerwindowtray#2017-1-19-patch)
+[현재 패치](//github.com/jongwony/layerwindowtray#2017-1-19-patch)
 
 - - -
 
@@ -108,7 +108,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 ## Source Code
 
-다음은 최종 코드의 일부이며 자세한 내용은 GitHub의 [layerwindowtray.cpp](//github.com/lastone9182/layerwindowtray/blob/master/layerwindowtray.cpp)
+다음은 최종 코드의 일부이며 자세한 내용은 GitHub의 [layerwindowtray.cpp](//github.com/jongwony/layerwindowtray/blob/master/layerwindowtray.cpp)
 를 참조하시길 바랍니다.
 
 ```c++

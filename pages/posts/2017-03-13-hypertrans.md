@@ -3,7 +3,7 @@ layout: post
 title: Python 콘솔에서 Google 번역
 tags: ['python', 'console', 'translate', 'http2', 'project']
 
-<a class="gitribbon" href="//github.com/lastone9182/hypertrans"></a>
+<a class="gitribbon" href="//github.com/jongwony/hypertrans"></a>
 
 [Google Translate](//translate.google.com) + HTTP/2
 
