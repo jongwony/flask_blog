@@ -35,7 +35,7 @@ def search(tag):
 def search_query():
     q = request.args.get('q')
     q = re.sub(r'\s*', '', q)
-    p_q = re.compile(r'\s*'.join(q))
+    p_q = re.compile(r'\s*'.join(q), re.I)
 
     def match_query(p):
         title = p.meta.get('title')
