@@ -1,5 +1,7 @@
+import re
+
 import markdown
-from flask import render_template
+from flask import render_template, request
 from pygments.styles import get_style_by_name
 
 from .app import app, pages
@@ -24,6 +26,30 @@ def search(tag):
 
     posts = [p for p in pages if tags(p) and tag in tags(p)]
 
+    sorted_posts = sorted(posts, reverse=True, key=lambda p: p.meta.get('date'))
+
+    return render_template('index.html', pages=sorted_posts)
+
+
+@app.route('/query')
+def search_query():
+    q = request.args.get('q')
+    q = re.sub(r'\s*', '', q)
+    p_q = re.compile(r'\s*'.join(q))
+
+    def match_query(p):
+        title = p.meta.get('title')
+        if p_q.search(title):
+            return True
+
+        # body is markdown. not html
+        for m in p_q.finditer(p.body):
+            if m:
+                return True
+
+        return False
+
+    posts = [p for p in pages if match_query(p)]
     sorted_posts = sorted(posts, reverse=True, key=lambda p: p.meta.get('date'))
 
     return render_template('index.html', pages=sorted_posts)

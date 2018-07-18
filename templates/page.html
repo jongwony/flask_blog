@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>{{ page.meta.title }}</h1>
+<h1 class="title">{{ page.meta.title }}</h1>
 
 <small class="date">{{ page.meta.date }}</small>
 
     <br>
 
 {% for tag in page.tags %}
-    <a id="tag" href="/search/{{ tag }}">
+    <a id="tag" href="{{ url_for('search', tag=tag) }}">
       <img src="//img.shields.io/badge/-{{ tag | capitalize }}-orange.svg" alt="{{ tag }}" />
     </a>
 {% endfor %}
