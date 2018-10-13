@@ -16,7 +16,7 @@ def home():
     # sort by date
     sorted_posts = sorted(posts, reverse=True, key=lambda p: p.meta.get('date'))
 
-    return render_template('index.html', pages=sorted_posts)
+    return render_template('html/index.html', pages=sorted_posts)
 
 
 @app.route('/search/<tag>')
@@ -28,7 +28,7 @@ def search(tag):
 
     sorted_posts = sorted(posts, reverse=True, key=lambda p: p.meta.get('date'))
 
-    return render_template('index.html', pages=sorted_posts)
+    return render_template('html/index.html', pages=sorted_posts)
 
 
 @app.route('/query')
@@ -52,7 +52,7 @@ def search_query():
     posts = [p for p in pages if match_query(p)]
     sorted_posts = sorted(posts, reverse=True, key=lambda p: p.meta.get('date'))
 
-    return render_template('index.html', pages=sorted_posts)
+    return render_template('html/index.html', pages=sorted_posts)
 
 
 @app.route('/<path:path>/')
@@ -60,9 +60,9 @@ def page(path):
     # path is the filename of a page, without the file extension
     post = pages.get_or_404(path)
     post.body = markdown.markdown(post.body, extensions=markdown_ext)
-    return render_template('page.html', page=post)
+    return render_template('html/page.html', page=post)
 
 
 @app.route('/about.html')
 def me():
-    return render_template('about.html', page=pages.get_or_404('about'))
+    return render_template('html/about.html', page=pages.get_or_404('about'))
