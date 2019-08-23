@@ -4,11 +4,6 @@
 #
 version: 2
 jobs:
-  deploy-job:
-    steps:
-      - add_ssh_keys:
-        fingerprints:
-          - SHA256:gSWPsIpAs/G1AB7ea6mAwUnezaPwRenRk9p5yCReKP4
   build:
     docker:
       # specify the version you desire here
@@ -33,3 +28,7 @@ jobs:
       - store_artifacts:
           path: test-reports
           destination: test-reports
+
+      - add_ssh_keys:
+        fingerprints:
+          - SHA256:gSWPsIpAs/G1AB7ea6mAwUnezaPwRenRk9p5yCReKP4
