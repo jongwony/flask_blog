@@ -1,9 +1,9 @@
 date: 2019-08-21 01:00:00
 title: AWS Lightsail Flask
-tag: ['aws', 'lightsail', 'flask', 'nginx', 'waitress', 'install']
+tags: ['aws', 'lightsail', 'flask', 'nginx', 'waitress', 'install']
 layout: post
 
-```
+```bash
 sudo yum update -y
 sudo yum upgrade -y
 

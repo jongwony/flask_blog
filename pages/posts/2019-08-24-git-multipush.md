@@ -1,6 +1,6 @@
 date: 2019-08-24 17:32:00
 title: git push multiple server
-tag: ['git', 'ssh', 'multiple', 'aws', 'lightsail', 'remote']
+tags: ['git', 'ssh', 'multiple', 'aws', 'lightsail', 'remote']
 layout: post
 
 ```

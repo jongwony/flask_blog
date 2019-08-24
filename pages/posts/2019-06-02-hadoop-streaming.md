@@ -1,6 +1,6 @@
 date: 2019-06-02 15:21:34
 title: Hadoop streaming
-tag: ['hadoop', 'streaming', 'map', 'reduce', 'python', 'docker']
+tags: ['hadoop', 'streaming', 'map', 'reduce', 'python', 'docker']
 layout: post
 
 ## Hadoop Docker
@@ -27,7 +27,7 @@ bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.0.jar grep i
 bin/hdfs dfs -cat output/*
 ```
 
-# Python3 with hadoop
+## Python3 with hadoop
 
 - sequenceiq/hadoop-docker Dockerfile
 
@@ -44,13 +44,13 @@ scl enable rh-python36 bash
 ln -s `which python3` /usr/bin/python3
 ```
 
-# Map reduce principle
+## Map reduce principle
 
 ```
 bin/hdfs dfs -cat input/* | ./mapper.py | sort -k1 | ./reducer.py
 ```
 
-# Python3 hadoop streaming example
+## Python3 hadoop streaming example
 
 - mapper.py
 
