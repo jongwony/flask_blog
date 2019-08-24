@@ -1,11 +1,11 @@
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jongwony Tech Notes</title>
     <link>{{ request.base_url + url_for('home') }}</link>
     <description>Tech Notes</description>
     <generator>Flask</generator>
     <language>ko</language>
-    <managingEditor>Jongwony</managingEditor>
+    <managingEditor>lastone9182@gmail.com</managingEditor>
     <copyright>Jongwony 2017</copyright>
     <lastBuildDate>{{ last_commit_time }}</lastBuildDate>
     {% for page in pages %}
@@ -13,7 +13,7 @@
       <title>{{ page.meta.title }}</title>
       <link>{{ request.base_url + url_for('page', path=page.path) }}</link>
       <pubDate>{{ page.meta.date.strftime('%a, %d %b %Y %T') }} +0900</pubDate>
-      <author>lastone9182@gmail.com</author>
+      <author>Jongwony</author>
       <guid>{{ request.base_url + url_for('page', path=page.path) }}</guid>
       <description>{# { page | tojson }} #}</description>
         {% for tag in page.tags %}
