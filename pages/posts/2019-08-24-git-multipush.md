@@ -13,7 +13,7 @@ github 서버 외에 다른 ssh 서버에 직접 푸시하여 코드 배포를 �
 
 여기서는 AWS Lightsail 을 예로 진행하겠습니다.
 
-![Image](static/images/git-multipush/2019-08-24-17:52.png)
+![Image](/static/images/git-multipush/2019-08-24-17:52.png)
 
 ```
 ssh -i "LightsailDefaultKey-ap-northeast-2.pem" ec2-user@tech.jongwony.com
@@ -34,7 +34,7 @@ touch ssh_repo.git/hooks/post-receive
 
 `post-receive`
 
-```
+```bash
 #!/bin/sh
 git --work-tree=$HOME/flask_blog --git-dir=$HOME/ssh_repo.git checkout -f
 ```
