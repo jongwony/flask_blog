@@ -17,7 +17,7 @@
       <pubDate>{{ page.meta.date.strftime('%a, %d %b %Y %T') }} +0900</pubDate>
       <author>lastone9182@gmail.com (Jongwony)</author>
       <guid>http://tech.jongwony.com{{ url_for('page', path=page.path) }}</guid>
-      <description><![CDATA[{{ page | safe }}]]></description>
+      <description><![CDATA[{{ page | tojson }}]]></description>
         {% for tag in page.tags %}
         <category>{{ tag }}</category>
         {% endfor %}
