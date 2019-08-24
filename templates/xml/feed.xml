@@ -11,7 +11,7 @@
     {% for page in pages %}
     <item>
       <title>{{ page.meta.title }}</title>
-      <link>{{ request.base_url + url_for('page', path=page.path) }}</link>
+      <link>http://tech.jongwony.com{{ url_for('page', path=page.path) }}</link>
       <pubDate>{{ page.meta.date.strftime('%a, %d %b %Y %T') }} +0900</pubDate>
       <author>lastone9182@gmail.com (Jongwony)</author>
       <guid>http://tech.jongwony.com{{ url_for('page', path=page.path) }}</guid>
