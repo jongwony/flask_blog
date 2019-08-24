@@ -8,6 +8,8 @@
     <managingEditor>lastone9182@gmail.com (Jongwony)</managingEditor>
     <copyright>Jongwony 2017</copyright>
     <lastBuildDate>{{ last_commit_time }}</lastBuildDate>
+    <atom:link href="http://tech.jongwony.com/rss" rel="self" type="application/rss+xml" />
+
     {% for page in pages %}
     <item>
       <title>{{ page.meta.title }}</title>
@@ -21,6 +23,5 @@
         {% endfor %}
     </item>
     {% endfor %}
-  <atom:link href="http://tech.jongwony.com/rss" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
