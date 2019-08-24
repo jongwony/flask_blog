@@ -21,14 +21,10 @@ jobs:
       - run:
           name: Run git pull
           command: |
-            git remote add lightsail ec2-user@tech.jongwony.com:ssh_repo.git
-            git push lightsail master
+            echo 'test'
 
 
       - store_artifacts:
           path: test-reports
           destination: test-reports
 
-      - add_ssh_keys:
-          fingerprints:
-            - "SHA256:gSWPsIpAs/G1AB7ea6mAwUnezaPwRenRk9p5yCReKP4"
