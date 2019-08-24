@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jongwony Tech Notes</title>
-    <link>{{ request.base_url + url_for('home') }}</link>
+    <link>http://tech.jongwony.com{{ url_for('home') }}</link>
     <description>Tech Notes</description>
     <generator>Flask</generator>
     <language>ko</language>
@@ -14,13 +14,13 @@
       <link>{{ request.base_url + url_for('page', path=page.path) }}</link>
       <pubDate>{{ page.meta.date.strftime('%a, %d %b %Y %T') }} +0900</pubDate>
       <author>lastone9182@gmail.com (Jongwony)</author>
-      <guid>{{ request.base_url + url_for('page', path=page.path) }}</guid>
+      <guid>http://tech.jongwony.com{{ url_for('page', path=page.path) }}</guid>
       <description>{# { page | tojson }} #}</description>
         {% for tag in page.tags %}
         <category>{{ tag }}</category>
         {% endfor %}
     </item>
     {% endfor %}
-  <atom:link href="http://dallas.example.com/rss.xml" rel="self" type="application/rss+xml" />
+  <atom:link href="http://tech.jongwony.com/rss" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
