@@ -3,11 +3,7 @@ title: Hadoop streaming
 tag: ['hadoop', 'streaming', 'map', 'reduce', 'python', 'docker']
 layout: post
 
-# Hadoop Streaming
-
-
-
-# Hadoop Docker
+## Hadoop Docker
 
 [sequenceiq/hadoop-docker](https://hub.docker.com/r/sequenceiq/hadoop-docker)
 

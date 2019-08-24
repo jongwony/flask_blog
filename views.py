@@ -1,8 +1,8 @@
 import re
+from subprocess import check_output
 
 import markdown
-from flask import render_template, request
-from pygments.styles import get_style_by_name
+from flask import render_template, request, make_response
 
 from .app import app, pages
 
@@ -12,10 +12,8 @@ markdown_ext = ['codehilite', 'extra']
 @app.route('/')
 def home():
     posts = [p for p in pages if p.meta.get('layout') == 'post']
-
     # sort by date
     sorted_posts = sorted(posts, reverse=True, key=lambda p: p.meta.get('date'))
-
     return render_template('html/index.html', pages=sorted_posts)
 
 
@@ -25,9 +23,7 @@ def search(tag):
         return p.meta.get('tags')
 
     posts = [p for p in pages if tags(p) and tag in tags(p)]
-
     sorted_posts = sorted(posts, reverse=True, key=lambda p: p.meta.get('date'))
-
     return render_template('html/index.html', pages=sorted_posts)
 
 
@@ -51,7 +47,6 @@ def search_query():
 
     posts = [p for p in pages if match_query(p)]
     sorted_posts = sorted(posts, reverse=True, key=lambda p: p.meta.get('date'))
-
     return render_template('html/index.html', pages=sorted_posts)
 
 
@@ -66,3 +61,19 @@ def page(path):
 @app.route('/about.html')
 def me():
     return render_template('html/about.html', page=pages.get_or_404('about'))
+
+
+@app.route('/feed.xml')
+def feed():
+    last_commit_time = check_output(
+        'git log -1 --pretty=format:"%aD"'.split()
+    ).decode().strip('"')
+    posts = [p for p in pages if p.meta.get('layout') == 'post']
+
+    # sort by date
+    sorted_posts = sorted(posts, reverse=True, key=lambda p: p.meta.get('date'))
+    xml = render_template('xml/feed.xml', pages=sorted_posts,
+                          last_commit_time=last_commit_time)
+    response = make_response(xml)
+    response.headers['Content-Type'] = 'application/xml'
+    return response

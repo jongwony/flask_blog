@@ -1,0 +1,25 @@
+<rss version="2.0">
+  <channel>
+    <title>Jongwony Tech Notes</title>
+    <link>{{ request.base_url + url_for('home') }}</link>
+    <description>Tech Notes</description>
+    <generator>Flask</generator>
+    <language>ko</language>
+    <managingEditor>lastone9182@gmail.com</managingEditor>
+    <copyright>Jongwony 2017</copyright>
+    <lastBuildDate>{{ last_commit_time }}</lastBuildDate>
+    {% for page in pages %}
+    <item>
+      <title>{{ page.meta.title }}</title>
+      <link>{{ request.base_url + url_for('page', path=page.path) }}</link>
+      <pubDate>{{ page.meta.date.strftime('%a, %d %b %Y %T') }} +0900</pubDate>
+      <author>Jongwony</author>
+      <guid>{{ url_for('page', path=page.path) }}</guid>
+      <description>{{ page | tojson }}</description>
+        {% for tag in page.tags %}
+        <category>{{ tag }}</category>
+        {% endfor %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
