@@ -66,7 +66,7 @@ def me():
 @app.route('/feed.xml')
 def feed():
     last_commit_time = check_output(
-        'git log -1 --pretty=format:"%aD"'.split()
+        'git -C ssh_repo.git log -1 --pretty=format:"%aD"'.split()
     ).decode().strip('"')
     posts = [p for p in pages if p.meta.get('layout') == 'post']
 
